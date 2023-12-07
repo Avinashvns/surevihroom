@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:surevihroom/utils/theme.dart';
+import 'package:surevihroom/widgets/mybutton.dart';
 import 'package:surevihroom/widgets/mytext.dart';
 
 void main() {
@@ -9,8 +10,8 @@ void main() {
 
       textTheme: TextTheme(
         displayLarge: const TextStyle(fontSize: 30,fontWeight: FontWeight.bold),
-        titleLarge: const TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
-        bodyLarge: const TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
+        titleLarge: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+        bodyLarge: const TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
       ),
     ),
     // Navigation with named routes
@@ -33,7 +34,7 @@ class _RoomRentState extends State<RoomRent> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Room Rent", style: Theme.of(context).textTheme.displayLarge!.copyWith(
-          color: Colors.red
+          color: textwhite
         ), ),
         backgroundColor: primaryColor,
       ),
@@ -72,10 +73,17 @@ class _RoomRentState extends State<RoomRent> {
                     onPressed: () {
                       print("clicked");
                     },
-                  )
+                  ),
+                  ElevatedWidget(
+                      widget: Textless(text: "Welcome", size: null,fontWeight: null, color: textwhite, isAlign: true),
+                      onPressed: (){
+                        print("hello");
+                      }
+                  ),
                 ],
               ),
             ),
+
           ],
         ),
       ),

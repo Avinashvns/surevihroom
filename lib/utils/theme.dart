@@ -6,6 +6,11 @@ import 'package:flutter/material.dart';
 const primaryColor= Color (0xFFE65100); //orange[900]
 const secondaryColor= Color(0xFFFFE0B2); //orange[100]
 
+// button Color
+const buttonColor = Colors.orange;
+const redbutton = Colors.red;
+const greenbutton = Colors.green;
+
 // text Color
 const textwhite = Colors.white;
 const textblack = Colors.black;
