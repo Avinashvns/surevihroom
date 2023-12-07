@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
+    // Navigation with named routes
     routes: {
       '/': (constext) => RoomRent(),
     },
