@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:surevihroom/utils/theme.dart';
+import 'package:surevihroom/widgets/mytext.dart';
 
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     theme: ThemeData(
-      backgroundColor: Colors.red,
+
       textTheme: TextTheme(
         displayLarge: const TextStyle(fontSize: 30,fontWeight: FontWeight.bold),
         titleLarge: const TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
@@ -33,7 +35,7 @@ class _RoomRentState extends State<RoomRent> {
         title: Text("Room Rent", style: Theme.of(context).textTheme.displayLarge!.copyWith(
           color: Colors.red
         ), ),
-        // backgroundColor: Colors.orange.shade300,
+        backgroundColor: primaryColor,
       ),
       body: SafeArea(
         child: Column(
@@ -47,7 +49,8 @@ class _RoomRentState extends State<RoomRent> {
                   padding: const EdgeInsets.all(10.0),
                   child: Column(
                     children: [
-                      Text("Welcome"),
+                      // Text("Welcome"),
+                      Textless(text: "Welcome", size: null,fontWeight: null, color: null, isAlign: true),
                       Text(
                           "There are some important information about this App :-"),
                       ListTile(
@@ -59,6 +62,7 @@ class _RoomRentState extends State<RoomRent> {
                 ),
               ),
             ),
+
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Column(
