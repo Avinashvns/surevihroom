@@ -3,6 +3,14 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
+    theme: ThemeData(
+      backgroundColor: Colors.red,
+      textTheme: TextTheme(
+        displayLarge: const TextStyle(fontSize: 30,fontWeight: FontWeight.bold),
+        titleLarge: const TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
+        bodyLarge: const TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
+      ),
+    ),
     // Navigation with named routes
     routes: {
       '/': (constext) => RoomRent(),
@@ -22,8 +30,10 @@ class _RoomRentState extends State<RoomRent> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Room Rent"),
-        backgroundColor: Colors.orange.shade300,
+        title: Text("Room Rent", style: Theme.of(context).textTheme.displayLarge!.copyWith(
+          color: Colors.red
+        ), ),
+        // backgroundColor: Colors.orange.shade300,
       ),
       body: SafeArea(
         child: Column(
