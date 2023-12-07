@@ -7,11 +7,12 @@ class Textless extends StatelessWidget {
   final String text;
   final double? size;
   final FontWeight? fontWeight;
-  final Color? color;
+  // final Color? color;
+  final bool blacktextColor;
   final bool isAlign;
 
 
-  const Textless({super.key, required this.text, required this.size,required this.fontWeight, required this.color, required this.isAlign});
+  const Textless({super.key, required this.text, required this.size,required this.fontWeight, required this.blacktextColor, required this.isAlign});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,8 @@ class Textless extends StatelessWidget {
       style: TextStyle(
         fontSize: size ?? bodySize,
         fontWeight: fontWeight ?? FontWeight.bold,
-        color: color != null ? color : textblack,
+        // color: color != null ? color : textblack,
+        color: blacktextColor == true ? textblack : textwhite,
       ),
       // style: Theme.of(context).textTheme.displayLarge!.copyWith(
       //   color: color != null ? color : textblack,
